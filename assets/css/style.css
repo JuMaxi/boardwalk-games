@@ -77,6 +77,10 @@ h2 {
     margin-top: 25px;
 }
 
+#reservation-form .custom-button-outline {
+    margin-top: 15px;
+}
+
 /* Navbar */
 #navbar {
     background-color: var(--primary-color);
