@@ -66,6 +66,17 @@ h2 {
     color: white;
 }
 
+#events .custom-button-filled {
+    border-radius: 0;
+    margin-top: 5px;
+    padding-left: 31px;
+    padding-right: 31px;
+}
+
+#events .custom-button-outline {
+    margin-top: 25px;
+}
+
 /* Navbar */
 #navbar {
     background-color: var(--primary-color);
@@ -134,11 +145,36 @@ h2 {
 
 /* Media queries */
 
+/* Small devices (mobiles 320px and up) */
+@media screen and (min-width: 320px){
+    /* Make font size table not overflow in small devices */
+    #events table {
+        font-size: 0.75rem;
+    }
+
+    #events .custom-button-filled {
+        font-size: 0.85rem;
+    }
+}
+
 /* Medium devices (tablets 768px and up) */
 @media screen and (min-width: 768px) {
     /* Make all service cards the same height for consistency */
     #services .card-body {
         min-height: 191px;
+    }
+
+    /* Make font size table not overflow in small devices */
+    #events p {
+        font-size: 1rem;
+    }
+
+    #events table {
+        font-size: 0.95rem;
+    }
+
+    #events .custom-button-filled {
+        font-size: 0.95rem;
     }
 }
 
@@ -156,6 +192,23 @@ h2 {
     #services .card-body {
         min-height: 220px;
     }
+
+    /* Make font size table not overflow in small devices */
+    #events p {
+        font-size: 1.1rem;
+    }
+
+    #events table {
+        font-size: 1rem;
+    }
+
+    #events .custom-button-filled {
+        font-size: 1.1rem;
+    }
+
+    #events .custom-button-outline {
+        font-size: 1.1rem;
+    }
 }
 
 /* Extra-extra large devices (larger desktops 1400px and up) */
@@ -163,6 +216,23 @@ h2 {
     /* Make all service cards the same height for consistency */
     #services .card-body {
         min-height: 195px;
+    }
+
+     /* Make font size table not overflow in small devices */
+     #events p {
+        font-size: 1.17rem;
+    }
+
+    #events table {
+        font-size: 1.1rem;
+    }
+
+    #events .custom-button-filled {
+        font-size: 1.17rem;
+    }
+
+    #events .custom-button-outline {
+        font-size: 1.17rem;
     }
 }
 
