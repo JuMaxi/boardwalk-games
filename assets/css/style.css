@@ -14,7 +14,7 @@
 /* Global styles */
 body {
     font-family: var(--primary-font);
-    padding: 57.15px; /* Pushes the top of the header down under fixed navbar */
+    padding: 20px; /* Pushes the top of the header down under fixed navbar */
 }
 
 h1,
@@ -66,20 +66,28 @@ h2 {
     color: white;
 }
 
-#events .custom-button-filled {
-    border-radius: 0;
-    margin-top: 5px;
-    padding-left: 31px;
-    padding-right: 31px;
+/* Events */
+#events .table {
+    /* events table font size small enough that 
+      the table doesn't overflow on xs screens. 
+      Size set back to 1rem in a media query 
+      for sm screens and up */
+    font-size: 0.7rem;
 }
 
-#events .custom-button-outline {
-    margin-top: 25px;
+.student-discount {
+    background-color: var(--highlight-color);
+    font-weight: bold;
+    color: white;
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    padding: 5px 10px;
+    font-size: 0.8rem;
 }
 
 #reservation-form .custom-button-outline {
     margin-top: 15px;
-    margin-bottom: 20px;
 }
 
 /* Navbar */
@@ -153,14 +161,26 @@ h2 {
 /* Media queries */
 
 /* Small devices (mobiles 320px and up) */
-@media screen and (min-width: 320px){
-    /* Make font size table not overflow in small devices */
-    #events table {
-        font-size: 0.75rem;
+@media screen and (min-width: 320px) {
+    /* increase font size in events table when screen size is large enough */
+    #events .paragraphs {
+        text-align: center;
     }
 
-    #events .custom-button-filled {
-        font-size: 0.85rem;
+    /* Make the contact aligned to the center when in small screens to improve design */
+    #contact .text {
+        text-align: center;
+    }
+}
+
+/* Small devices (mobiles 576px and up) */
+@media screen and (min-width: 576px) {
+    /* increase font size in events table when screen size is large enough */
+    #events .table {
+        font-size: 1rem;
+    }
+    .student-discount {
+        font-size: 1rem;
     }
 }
 
@@ -175,14 +195,6 @@ h2 {
     #events p {
         font-size: 1rem;
     }
-
-    #events table {
-        font-size: 0.95rem;
-    }
-
-    #events .custom-button-filled {
-        font-size: 0.95rem;
-    }
 }
 
 /* Large devices (small laptops 992px and up) */
@@ -190,6 +202,15 @@ h2 {
     /* Make all service cards the same height for consistency */
     #services .card-body {
         min-height: auto;
+    }
+
+    /* Change the contact position when 992up to improve design */
+    #contact .text {
+        text-align:start;
+    }
+
+    #contact .align-992up {
+        text-align: start;
     }
 }
 
@@ -200,21 +221,9 @@ h2 {
         min-height: 220px;
     }
 
-    /* Make font size table not overflow in small devices */
-    #events p {
-        font-size: 1.1rem;
-    }
-
-    #events table {
-        font-size: 1rem;
-    }
-
-    #events .custom-button-filled {
-        font-size: 1.1rem;
-    }
-
-    #events .custom-button-outline {
-        font-size: 1.1rem;
+    /* Align paragraphs to the left */
+    #events .paragraphs {
+        text-align: left;
     }
 }
 
@@ -223,22 +232,5 @@ h2 {
     /* Make all service cards the same height for consistency */
     #services .card-body {
         min-height: 195px;
-    }
-
-     /* Make font size table not overflow in small devices */
-     #events p {
-        font-size: 1.17rem;
-    }
-
-    #events table {
-        font-size: 1.1rem;
-    }
-
-    #events .custom-button-filled {
-        font-size: 1.17rem;
-    }
-
-    #events .custom-button-outline {
-        font-size: 1.17rem;
     }
 }
