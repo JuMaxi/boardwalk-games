@@ -59,6 +59,7 @@ h2 {
     border: 2px solid var(--highlight-color);
     color: var(--highlight-color);
     padding: 7px 25px;
+    margin-bottom: 20px;
 }
 
 .custom-button-outline:hover {
